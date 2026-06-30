@@ -70,6 +70,7 @@ This AuthorisedSignatories Attestation Rulebook is based on:
 ### 1.2 Document Structure
 This Rulebook is structured as follows:
 
+- Chapter 1 describes the document scope and purpose
 - Chapter 2 describes the Contact Person attestation attributes and metadata in an encoding-independent manner, including the data model.
 - Chapter 3 specifies how the attestation attributes and metadata are encoded: Section 3.2  covers SD-JWT VC-based encoding.
 - Chapter 4 specifies attestation usage scenarios, Relying Party obligations, and integration  with supplier onboarding and KYS workflows.
@@ -237,7 +238,7 @@ This object is defined for each person represented in the AuthorisedSignatories 
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                      | **Data type** |
 |---------------------|------------------------|---------------------------------------------------------------------|---------------|
-| address             | —                      | The street address where the authorised person currently resides    | String        |
+| address             | Should we not split the "address" in: "street" and " house_number"?                    | The street address where the authorised person currently resides    | String        |
 | locality            | —                      | The city where the authorised person currently resides              | String        |
 | postal_code         | —                      | The postal or ZIP code of the authorised person's address           | String        |
 | region              | —                      | The state, province, or region of the authorised person's address   | String        |
@@ -381,7 +382,7 @@ The `.` notation is used to indicate the nesting of attributes.
 | identifier.issuing_country        | authorised_persons[n].identifier.issuing_country        | string              | Country that issued the identity document; ISO 3166-1 alpha-3; optional                                           | MAY             |
 | identifier.document_expiry_date   | authorised_persons[n].identifier.document_expiry_date   | string              | Expiration date of the identity document; ISO 8601 full-date format (YYYY-MM-DD); optional                        | MAY             |
 | **Metadata**                      |                                                         |                     |                                                                                                                   |                 |
-| attestation_legal_category        | attestation_legal_category                              | string              | One of "EAA" as defined by eIDAS 2                                                                                | MUST NOT        |
+| attestation_legal_category        | attestation_legal_category                              | string              | One of "EAA" as defined by eIDAS 2.0                                                                                | MUST NOT        |
 
 **Notes:**
 
