@@ -2,9 +2,9 @@
 
 * Author(s):
   * [Florin Coptil, Robert Bosch GmbH]
-  * [Stephan-A Fuchs, Deutsche Bank]
+  * [Stephan-A Fuchs, Deutsche Bank AG]
 * Reviewer(s):
-  * [Baumgardt Michaela, Commerzbank]
+  * [Baumgardt Michaela, Commerzbank AG]
   * [Ricky Lamberty, Robert Bosch GmbH]
   * @TODO Florin — Add the reviewers from attestation design (meetings UseCase, Banks, TransparentRegister)
 
