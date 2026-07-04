@@ -141,7 +141,7 @@ UBO [1...n]
 ├─ person (M)
 │   ├─ first_name (tstr) (M)
 │   ├─ surname (tstr) (M)
-│   ├─ birth_date (date) (O)  date_of_birth
+│   ├─ birth_date (date) (M)  date_of_birth
 ├─ birth_place 
 │   ├── locality (M)
 │   ├── country (M)
