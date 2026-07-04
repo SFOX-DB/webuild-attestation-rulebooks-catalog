@@ -162,7 +162,7 @@ UBO [1...n]
 │   ├── region (M)
 │   ├── postal_code (M)
 │   └── country(s)
-├─ person_identifier
+├─ person_identifier (M)
 │   ├── document_type (M)
 │   ├── document_number (M)
 │   ├── issuing_country (M)
