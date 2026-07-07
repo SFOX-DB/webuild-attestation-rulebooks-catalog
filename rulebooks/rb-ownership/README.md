@@ -2,9 +2,9 @@
 
 * Author(s):
   * [Florin Coptil, Robert Bosch GmbH]
-  * [Stephan-A Fuchs, Deutsche Bank]
+  * [Stephan Fuchs, Deutsche Bank AG]
 * Reviewer(s):
-  * [Baumgardt Michaela, Commerzbank]
+  * [Baumgardt Michaela, Commerzbank AG]
   * [Ricky Lamberty, Robert Bosch GmbH]
   * @TODO Florin — Add the reviewers from attestation design (meetings UseCase, Banks, TransparentRegister)
 
@@ -58,7 +58,7 @@ This Rulebook is structured as follows:
 
 - Chapter 2 describes the attestation attributes and metadata in an encoding-independent  manner, including the data model.
 - Chapter 3 specifies how the attestation attributes and metadata are encoded: Section 3.2 covers SD-JWT VC-based encoding.
-- Chapter 4 specifies attestation usage scenarios, Relying Party obligations, and integration   with KYC/KYS workflows.
+- Chapter 4 specifies attestation usage scenarios, Relying Party obligations, and integration with KYC/KYS workflows.
 - Chapter 5 defines trust anchors and verification mechanisms for issuer authorization.
 - Chapter 6 defines revocation mechanisms for the attestation.
 - Chapter 7 provides compliance information regarding the EBW framework, AML regulations, corporate governance standards, and applicable data protection laws.
@@ -84,7 +84,7 @@ This document uses the terminology specified in Annex 1 of the ARF.
 | **Term**                                           | **Definition**                                                                                                                                                                                         |
 |----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Ownership                                          | A comprehensive record of all natural and legal persons holding direct or indirect ownership or control in a legal entity, including ownership percentages and supporting evidence                      |
-| Beneficial Owner / Ultimate Beneficial Owner (UBO) | A natural person who ultimately owns or controls a legal entity, either directly or indirectly (typically defined as holding ≥25% ownership or control, per AMLD requirements)                         |
+| Beneficial Owner / Ultimate Beneficial Owner (UBO) | A natural person who ultimately owns or controls a legal entity, either directly or indirectly (typically defined as holding ≥25% ownership or control, per AMLR requirements)                         |
 | Direct Ownership                                   | Ownership interest held directly by a natural or legal person in the subject entity, without intermediary entities                                                                                      |
 | Indirect Ownership                                 | Ownership interest held through one or more intermediary legal entities (e.g., Person A owns 50% of Company B, which owns 60% of Company C → Person A has 30% indirect ownership in Company C)         |
 | Total Ownership                                    | The sum of direct and indirect ownership percentages across all layers of the ownership structure                                                                                                       |
@@ -122,7 +122,7 @@ Owner [1..n]                                    // The person or entity that hol
 ├─ person (O, conditional on type="Person")
 │   ├─ first_name (tstr) (M)
 │   ├─ surname (tstr) (M)
-│   └─ birth_date (date) (O)                    // ISO 8601 YYYY-MM-DD
+│   └─ birth_date (date) (M)                    // ISO 8601 YYYY-MM-DD
 ├─ entity (O, conditional on type="Entity")
 │   ├─ category (enum) (M)                      // "legal_entity" | "legal_arrangement"
 │   ├─ name (tstr) (M)
@@ -660,7 +660,7 @@ The `.` notation is used to indicate the nesting of attributes.
 | **Person**                    |                                                        |                             |                                                                                     |                    |
 | `first_name`                  | `owner[n].person.first_name`                           | String                      | SHALL be non-empty                                                                  | MUST               |
 | `surname`                     | `owner[n].person.surname`                              | String                      | SHALL be non-empty                                                                  | MUST               |
-| `birth_date`                  | `owner[n].person.birth_date`                           | String (ISO 8601)           | ISO 8601 YYYY-MM-DD — optional                                                      | MAY                |
+| `birth_date`                  | `owner[n].person.birth_date`                           | String (ISO 8601)           | ISO 8601 YYYY-MM-DD — optional                                                      | MUST                |
 | **Entity / LegalArrangement** |                                                        |                             |                                                                                     |                    |
 | `category`                    | `owner[n].entity.category`                             | String                      | `"legal_entity"` \| `"legal_arrangement"`                                           | MUST               |
 | `name`                        | `owner[n].entity.name`                                 | String                      | SHALL be non-empty                                                                  | MUST               |
