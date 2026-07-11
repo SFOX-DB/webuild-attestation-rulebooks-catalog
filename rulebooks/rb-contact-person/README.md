@@ -7,7 +7,7 @@
   *
 * Reviewer(s):
   * [Werner Folkendt, Robert Bosch GmbH]
-  * [Stephan-A Fuchs, Deutsche Bank]
+  * [Stephan Fuchs, Deutsche Bank AG]
 
 | Version | Date       | Description                                                     |
 |---------|------------|-----------------------------------------------------------------|
