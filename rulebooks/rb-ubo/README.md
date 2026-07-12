@@ -2,7 +2,7 @@
 
 * Author(s):
   * [Florin Coptil, Robert Bosch GmbH]
-  * [Stephan-A Fuchs, Deutsche Bank AG]
+  * [Stephan Fuchs, Deutsche Bank AG]
 
 * Reviewer(s):
   * [Baumgardt Michaela, Commerzbank ]
