@@ -7,6 +7,7 @@
   * 
 * Reviewer(s):
   * [Ricky Lamberty, Robert Bosch GmbH]
+  * [Stephan Fuchs, Deutsche Bank AG]
 
 | Version | Date       | Description                                                     |
 |---------|------------|-----------------------------------------------------------------|
