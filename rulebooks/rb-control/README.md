@@ -5,7 +5,7 @@
   * [Stephan Fuchs, Deutsche Bank AG]
 
 * Reviewer(s):
-  * [Baumgardt Michaela, Commerzbank]
+  * [Baumgardt Michaela, Commerzbank AG]
   * [Ricky Lamberty, Robert Bosch GmbH]
   * @TODO Florin — Add the reviewers from attestation design (meetings UseCase, Banks, TransparentRegister)
 
@@ -131,7 +131,7 @@ Controller [1..n]                               // The person or entity exercisi
 ├─ person (O, conditional on type="Person")
 │   ├─ first_name (tstr) (M)
 │   ├─ surname (tstr) (M)
-│   └─ birth_date (date) (O)                    // ISO 8601 YYYY-MM-DD
+│   └─ birth_date (date) (M)                    // ISO 8601 YYYY-MM-DD
 ├─ entity (O, conditional on type="Entity")
 │   ├─ category (enum) (M)                      // "legal_entity" | "legal_arrangement"
 │   ├─ name (tstr) (M)
