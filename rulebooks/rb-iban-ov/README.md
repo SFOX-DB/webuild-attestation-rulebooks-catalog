@@ -2,7 +2,7 @@
 
 * Author(s):
   * [Ricky Lamberty, Robert Bosch GmbH]
-  * [Stephan-A Fuchs, Deutsche Bank AG]
+  * [Stephan A Fuchs, Deutsche Bank AG]
 * Previous Authors:
 * Reviewer(s):
   * [Florin Coptil, Robert Bosch GmbH]
@@ -15,7 +15,8 @@
 |---------|------------|-----------------------------------------------------------------|
 | 0.1     | 15.05.2026 | Initial draft based on the WeBuild design attestations meetings |
 | 0.2     | 17.06.2026 | Reviewed version based on the initial draft 					 |
-| 0.3     | 25.06.2026 | Alignment with data schema and natural persons requirements	 |
+| 0.3     | 25.06.2026 | Alignment with data schema and natural persons requirements  |
+| 0.8     | 20.07.2026 | Feedback processed 					 |
 
 * Contact:
   * [Ricky Lamberty](mailto:Ricky.Lamberty@bosch.com)*
@@ -102,27 +103,27 @@ The IBAN-OV Attestation is a document that provides verified information about t
 ```
 IBAN-OV Attestation
 │
-├── Bank_Account
-│ ├── account_name
-│ ├── iban
-│ ├── account_type
-│ └── account_currency
+├── Bank_Account (M)
+│ ├── account_name (M)
+│ ├── iban (M)
+│ ├── account_type (M)
+│ └── account_currency (M)
 │
-├── Account_Ownership 
-│ ├── owner_type 
-│ └── owner_name		(mandatory if legal person, 'entity')
-│ └── euid
-│ ├── given_name		(mandatory if natural person, 'person')
-│ ├── surname			(mandatory if natural person, 'person')
+├── Account_Ownership (M)
+│ ├── owner_type (M)
+│ └── owner_name (M)		(mandatory if legal person, 'entity')
+│ └── euid (O)
+│ ├── given_name	(M)	(mandatory if natural person, 'person')
+│ ├── surname		(M)	(mandatory if natural person, 'person')
 │
-└── Account_Provider
-  ├── provider_name
-  ├── euid
-  ├── provider_country
-  ├── bic_swift
-  ├── national_bank_code
-  ├── nace_code
-  ├── clearing_number
+└── Account_Provider (M)
+  ├── provider_name (M)
+  ├── euid (M)
+  ├── provider_country (M)
+  ├── bic_swift (M)
+  ├── national_bank_code (O)
+  ├── nace_code (O)
+  ├── clearing_number (O)
 ```
 
 **Explanation:**
